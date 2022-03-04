@@ -8,3 +8,7 @@
 
 [file_servers]
 172.16.250.134
+
+[workstation]
+
+172.16.250.135
