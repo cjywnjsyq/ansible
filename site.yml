@@ -28,6 +28,20 @@
       name: simone
       groups: root
 
+  - name: add ssh key for simone
+    tags: always
+    authorized_key:
+      user: simone
+      key: "to be added ssh.pub"
+
+  - name: add sudoers file for simone
+    tags: always
+    copy:
+      src: sudoer_simone
+      dest: /etc/sudoers.d/simone
+      owner: root
+      group: root
+
 - hosts: workstation
   become: true
   tasks:
